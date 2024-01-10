@@ -8,3 +8,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular_docker';
 }
+//"target":"http://192.168.100.30:4000",

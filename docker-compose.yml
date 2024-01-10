@@ -1,0 +1,22 @@
+version: '3.2'
+services:
+  app:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: ng_frontend
+    ports:
+      - "2000:4200"
+    volumes:
+      - '.:/app/client'
+#    networks:
+#      ng_net:
+#        aliases:
+#          - ng_front
+#networks:
+#  ng_net:
+#    name: flask_back_net
+#    driver: bridge
+#    external: true
+#    ipam: 
+#      driver: default

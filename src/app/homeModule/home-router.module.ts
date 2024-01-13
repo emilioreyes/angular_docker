@@ -3,18 +3,15 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { StoreComponent } from './store/store.component';
-import { LoginComponent } from './login/login.component';
 
 const routes:Routes=[
   {path:'',children:[
-    {
-      path:"login", component:LoginComponent
-    },{
+   {
       path:"store",component:StoreComponent
     },{
       path:"home",component:HomeComponentComponent
     },{
-      path: '', pathMatch: 'full', redirectTo: 'login'
+      path: '', pathMatch: 'full', redirectTo: 'store'
     }
   ]}
 ]

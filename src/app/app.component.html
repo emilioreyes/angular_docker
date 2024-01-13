@@ -1,2 +1,2 @@
-
+<app-nav *ngIf="(loginService.isAuthenticated$ | async)"></app-nav>
 <router-outlet></router-outlet>

@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Build development environment
  - navigate to `my/download/path/angular_docker`
  - Run `docker compose up -d --build`
+ - this project use docker flask project `https://github.com/emilioreyes/flask-backend.git`
 
 ## Development server
 

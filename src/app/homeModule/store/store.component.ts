@@ -12,7 +12,6 @@ export class StoreComponent implements OnInit{
 
   ngOnInit(): void {
     this.myService.getTestList().subscribe((res:any)=>{
-      console.log(res)
       this.productos=res
     })
   }

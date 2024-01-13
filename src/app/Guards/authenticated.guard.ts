@@ -10,7 +10,6 @@ export const autoLoginGuard: CanActivateFn = (route, state) => {
     filter(val => val !== null), 
     take(1),
     map(isAuthenticated=>{
-      console.log(isAuthenticated);
      if (isAuthenticated){
       router.navigate(['/home'])
       }
@@ -25,7 +24,6 @@ export const authenticatedGuard : CanActivateFn = (route, segments) => {
     filter(val => val !== null), 
     take(1),
     map(isAuthenticated=>{
-      console.log(isAuthenticated);
      if (isAuthenticated){
        return true
       }else{

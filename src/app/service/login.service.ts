@@ -31,7 +31,5 @@ export class LoginService {
   }
   loadToken() {
     localStorage.getItem("TOKEN") ? this.isAuthenticated$.next(true):this.isAuthenticated$.next(false)
-    console.log(this.isAuthenticated$.getValue());
-    
   }
 }

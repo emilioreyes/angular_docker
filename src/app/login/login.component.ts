@@ -29,10 +29,8 @@ export class LoginComponent implements OnInit{
       username:this.form.controls['user'].value,
       password:this.form.controls['password'].value,
     }
-    console.log(this.credentials)
     this.loginService.login(this.credentials).subscribe(res=>{
 
-    console.log(res);
     this.router.navigate(['/home'])
   })
 

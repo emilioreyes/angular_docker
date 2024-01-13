@@ -1,17 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FromDockerComponent } from './dockerModule/from-docker/from-docker.component';
+import { LoginComponent } from './login/login.component';
+import { authenticatedGuard, autoLoginGuard } from './Guards/authenticated.guard';
 
 const routes: Routes = [
-
   {
+    path: '', pathMatch: 'full', redirectTo: '/login'
+  },{
+    path:"login", component:LoginComponent,
+    canActivate:[autoLoginGuard]
+  },{
     path: 'home',
-    loadChildren: () => import('./homeModule/module.module').then(m => m.ModuleModule)
-  },{
-    path: 'docker',component:FromDockerComponent
-  },{
-    path: '', pathMatch: 'full', redirectTo: 'home'
-  }
+    loadChildren: () => import('./homeModule/module.module').then(m => m.ModuleModule),
+    canActivate:[authenticatedGuard],
+  },
 ];
 
 @NgModule({

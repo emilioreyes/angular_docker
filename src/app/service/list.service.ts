@@ -1,5 +1,5 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { UserResponse} from '../modelos/userModel';
 
@@ -8,7 +8,7 @@ import { UserResponse} from '../modelos/userModel';
 })
 export class ListService {
 
-  constructor(private http: HttpClient) { }
+  http=inject(HttpClient)
 
   getTestList(){
     let headers = new HttpHeaders(

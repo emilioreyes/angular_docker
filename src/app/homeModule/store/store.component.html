@@ -1,1 +1,4 @@
-<p>store works!</p>
+<div class="grid gap-3 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 sm:mx-2">
+       <app-card-producto class="min-w-[450px] md:shadow-2xl sm:min-w-[390px] sm:rounded-2xl sm:overflow-hidden" *ngFor="let item of productos"[producto]="item"></app-card-producto>
+          
+</div>

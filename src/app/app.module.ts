@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FromDockerComponent } from './dockerModule/from-docker/from-docker.component';
+import { NavComponent } from './Components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FromDockerComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,

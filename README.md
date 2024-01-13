@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Build development environment
  - navigate to `my/download/path/angular_docker`
  - Run `docker compose up -d --build`
- - this project use `master` branch  => `https://github.com/emilioreyes/flask-backend.git` as backend
+ - this project branch use `master` branch  => `https://github.com/emilioreyes/flask-backend.git` as backend
 
 ## Note
 - this project have `proxy.conf.json` to consume the dockerized backend, you should change the  `"target":"http://your.locol.ip.address:4000",`
